@@ -20,3 +20,7 @@ ENV LEEWAY_WORKSPACE_ROOT=/workspace/werft
 RUN curl -L https://github.com/TypeFox/leeway/releases/download/v0.1.0/leeway_0.1.0_Linux_x86_64.tar.gz | tar xz && \
     mv leeway /usr/bin/leeway && \
     rm README.md
+
+RUN curl -L https://get.helm.sh/helm-v3.3.0-rc.2-linux-amd64.tar.gz | tar xz linux-amd64/helm && \
+    mv linux-amd64/helm /usr/bin && \
+    rm -r linux-amd64
